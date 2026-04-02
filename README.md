@@ -1,7 +1,7 @@
 # Introduction to Web Programming in PHP4
 
 🔗 Original course:
-[https://stahe.github.io/en-progphp-nov-2002/](https://stahe.github.io/enprogphp-nov-2002/)
+[https://stahe.github.io/en-progphp-nov-2002/](https://stahe.github.io/en-progphp-nov-2002/)
 
 ## Overview
 
