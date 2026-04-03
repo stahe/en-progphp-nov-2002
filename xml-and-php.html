@@ -1696,6 +1696,8 @@
   <li>Client application designers, too, simply need to know the structure of the server’s XML response. Any changes the front-end designer might make to the style sheets have no impact on this XML response, which always remains the same. This is a huge advantage.
   </li>
   <li>How can the developer update their PHP application without breaking everything? First of all, as long as the XML response remains unchanged, they can organize their application however they like. They can also update the XML response as long as they retain the <b>&lt;error&gt; </b>and <b>&lt;simulation&gt; </b>elements expected by their clients. They can thus add new tags to this response. The front-end developer will account for them in their style sheets, and browsers will be able to display the updated version of the response. Programmatic clients, however, will continue to function using the old model, with the new tags simply being ignored. For this to work, the tags being looked for must be clearly identified in the XML parsing of the server’s response. This is what was done in our XML client for the <b>tax</b> application, where the procedures specifically stated that we were processing the <i>&lt;error&gt; </i>and <i>&lt;simulation&gt; </i>tags. As a result, the other tags are ignored.
+  </li>
+</ul>
 
 
 

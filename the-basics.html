@@ -587,7 +587,18 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2.7.2. The TCP/IP Model">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#273-the-http-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7.3. The HTTP Protocol
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.7.3. The HTTP Protocol">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1504,11 +1515,9 @@
   <li>The client knows from the server’s HTTP headers that it will receive an HTML document. It will parse this document and may notice that it contains image references. These images are not included in the HTML document. It therefore makes a new request to the same web server to request the first image it needs. This request is identical to the one made in step 1, except that the requested resource is different. The server will process this request by sending the requested image to the client. This time, in its response, the HTTP headers will specify that the document sent is an image and not an HTML document.
   </li>
   <li>The client retrieves the sent image. Steps 3 and 4 will be repeated until the client (usually a browser) has all the documents needed to display the entire page.
-### 2.7.3. <span style="color: #4f81bd">The HTTP Protocol</span>
-
   </li>
 </ol>
-
+<h3 id="273-the-http-protocol">2.7.3. <span style="color: #4f81bd">The HTTP Protocol</span></h3>
 <p>Let’s explore the HTTP protocol through examples. What do a browser and a web server exchange? </p>
 <h4 id="2731-the-response-from-an-http-server">2.7.3.1. <span style="color: #4f81bd"><em>The Response from an HTTP Server</em></span></h4>
 <p>Here, we’ll explore how a web server responds to requests from its clients. The Web service or HTTP service is a TCP/IP service that typically operates on port 80. It could operate on a different port. In that case, the client browser would need to specify that port in the URL it requests. A URL generally follows this format:</p>

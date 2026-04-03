@@ -428,6 +428,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#32-the-php-interpreter-configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. The PHP interpreter configuration file
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#33-configuring-php-at-runtime" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -477,6 +488,17 @@
     <span class="md-ellipsis">
       
         3.6.1. via a POST
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#362-via-a-get" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.2. via a GET
       
     </span>
   </a>
@@ -599,6 +621,17 @@
     <span class="md-ellipsis">
       
         3.10.1. The Problem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3102-the-php-api-for-session-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.10.2. The PHP API for session tracking
       
     </span>
   </a>
@@ -839,11 +872,9 @@
   <li>the blank line separating the HTTP headers from the rest of the document
   </li>
   <li>the document consisting here of the text written by the <i>echo</i> function
-## 3.2. <span style="color: #4f81bd">The PHP interpreter configuration file</span>
-
   </li>
 </ul>
-
+<h2 id="32-the-php-interpreter-configuration-file">3.2. <span style="color: #4f81bd">The PHP interpreter configuration file</span></h2>
 <p>The behavior of the PHP interpreter is configured via a configuration file called <em>php.ini</em>, which is located, in Windows, within the Windows directory itself. It is a fairly large file; in Windows, for PHP version 4.2, it contains nearly 1,000 lines, three-quarters of which, fortunately, are comments. Let’s examine some of PHP’s configuration settings:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>short_open_tag = On
@@ -1150,11 +1181,9 @@
   <li>This is the first time the user is calling it. The <i>nomage.php </i>application therefore calls the <i>nomage-p1.php </i>application, passing it the values <i>($nom, $age, $post) </i>= (&quot;&quot;, &quot;&quot;, false). The <i>nomage-p1.php </i>application then displays an empty form.
   </li>
   <li>The user fills <i>out</i> the form and clicks the <i>Submit</i> button. The form values (<i>txtName</i>, <i>txtAge</i>) are then &quot;posted&quot; (<i>method=&quot;post&quot; </i>in &lt;form&gt;) to the <i>nomage.php </i>application (<i>action</i> attribute not defined in &lt;form&gt;). The <i>nomage.php </i>application calculates ($name, $age, $post) = (txtName, txtAge, true) and transmits them to the <i>nomage-p1.php </i>application<i>, </i>which then displays a pre-filled form along with the table of retrieved values.
-### 3.6.2. <span style="color: #4f81bd">via a GET</span>
-
   </li>
 </ol>
-
+<h3 id="362-via-a-get">3.6.2. <span style="color: #4f81bd">via a GET</span></h3>
 <p>In the case where the form values are sent to the server via a GET request, the <em>nomage.php</em> application becomes the following <em>nomage2.php</em> application:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="cp">&lt;?php</span>
 <a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>  <span class="c1">// Do we have the expected parameters?</span>
@@ -2196,13 +2225,11 @@
       <li>The server sends its response. This response contains links that the user must use to continue using the application. In the URL of each of these links, the server adds the token in the form <i>URL;token=value</i>.
       </li>
       <li>When the user clicks on one of the links to continue using the application, the browser sends a request to the web server, including the requested URL <i>(URL;token=value</i>) in the HTTP headers. The server is then able to retrieve the token.
-### 3.10.2. <span style="color: #4f81bd">The PHP API for session tracking</span>
-
       </li>
     </ul>
   </li>
 </ul>
-
+<h3 id="3102-the-php-api-for-session-tracking">3.10.2. <span style="color: #4f81bd">The PHP API for session tracking</span></h3>
 <p>We will now present the main methods useful for session tracking:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-89-1" name="__codelineno-89-1" href="#__codelineno-89-1"></a>session_start()

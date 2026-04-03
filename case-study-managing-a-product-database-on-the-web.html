@@ -558,6 +558,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#74-the-products-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4. The Products Class
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#75-the-structure-of-the-web-application" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -592,6 +603,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#753-the-configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5.3. The configuration file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#754-the-stylesheet-associated-with-the-template-page" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -607,6 +629,17 @@
     <span class="md-ellipsis">
       
         7.5.5. The application’s entry module
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#756-the-error-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5.6. The error page
       
     </span>
   </a>
@@ -736,6 +769,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#771-changing-the-database-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.7.1. Changing the database type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#772-improving-security" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -751,6 +795,17 @@
     <span class="md-ellipsis">
       
         7.7.3. Updating the &quot;look&quot;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#774-improving-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.7.4. Improving Performance
       
     </span>
   </a>
@@ -968,11 +1023,9 @@
 
 <ul>
   <li>In the diagram above, the business class will interface with the data source. By assumption, this source is a MySQL database. To allow for migration to another database, we will use the PEAR library, which provides database access classes independent of the actual database type. Thus, if our merchant becomes wealthy enough to install a Microsoft IIS web server in their company, they will be able to replace the MySQL database with SQL Server without having to (or with very little need to) change the business class.
-## 7.4. <span style="color: #4f81bd">The Products Class</span>
-
   </li>
 </ul>
-
+<h2 id="74-the-products-class">7.4. <span style="color: #4f81bd">The Products Class</span></h2>
 <p>The <code>**articles</code>** class could be defined as follows:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="cp">&lt;?php</span>
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
@@ -1390,11 +1443,9 @@
   <li>is reduced to a form
   </li>
   <li>is styled by both the <b>$main</b> dictionary and the stylesheet.
-### 7.5.3. <span style="color: #4f81bd">The configuration file</span>
-
   </li>
 </ul>
-
+<h3 id="753-the-configuration-file">7.5.3. <span style="color: #4f81bd">The configuration file</span></h3>
 <p>It is always best to configure applications as much as possible to avoid having to modify the code simply because, for example, you decided to change the path of a script or an image. The main application, <strong>apparticles.php,</strong> will therefore load a configuration file, <strong>config.php,</strong> upon startup:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>    // loading the configuration file
 <a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>  include &quot;config.php&quot;;
@@ -1715,13 +1766,11 @@
       <li><b>$dConfig </b>is a dictionary containing information from the <b>config.php </b>configuration file. All functions use it.
       </li>
       <li><b>$dSession </b>is a dictionary containing session information. It exists only when the session has been created, i.e., after the user has successfully authenticated. This is why the <b>authentication</b> functions do not have this parameter.
-### 7.5.6. <span style="color: #4f81bd">The error page</span>
-
       </li>
     </ul>
   </li>
 </ul>
-
+<h3 id="756-the-error-page">7.5.6. <span style="color: #4f81bd">The error page</span></h3>
 <p>Every software application must be able to properly handle errors that may occur. A web application is no exception to this rule. Here, in the event of an error, we will place the following <strong>errors.php</strong> page in zone 4 of the template page:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>The following errors occurred:
 <a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
@@ -2214,11 +2263,9 @@
   <li>its appearance
   </li>
   <li>its performance
-### 7.7.1. <span style="color: #4f81bd">Changing the database type</span>
-
   </li>
 </ul>
-
+<h3 id="771-changing-the-database-type">7.7.1. <span style="color: #4f81bd">Changing the database type</span></h3>
 <p>Our study assumed that the DBMS used was MySQL. Switch to a different DBMS and demonstrate that the only change required is to the definition of the <strong>$dDSN</strong> variable in the <strong>config.php</strong> configuration file.</p>
 <h3 id="772-improving-security">7.7.2. <span style="color: #4f81bd">Improving security</span></h3>
 <p>When developing a web application, you should never assume that the client is a browser and that the request it sends is controlled by the form you sent it prior to that request. Any program can act as a client for a web application and thus send any request—whether parameterized or not—to the application. The application must therefore verify everything.</p>
@@ -2420,11 +2467,9 @@
   <li>in the <b>main.php </b>script, which defines the structure of the template page. Update this script.
   </li>
   <li>in the stylesheet that determines the application’s “look.” Change this.
-### 7.7.4. <span style="color: #4f81bd">Improving Performance</span>
-
   </li>
 </ul>
-
+<h3 id="774-improving-performance">7.7.4. <span style="color: #4f81bd">Improving Performance</span></h3>
 <p>For now, we have opted for a thin-client browser: it does nothing but display content. We can make it perform processing by including scripts in the web pages we send to it. These can be written in various languages, notably VBScript and JavaScript. Internet Explorer and Netscape dominate the browser market in a ratio of roughly 60/40. Furthermore, IE is only available on Windows and not on Unix, for example, where Netscape predominates. Netscape does not natively execute VBScript, whereas both browsers execute JavaScript. Since Netscape still holds a significant share of the browser market, VBScript should be avoided. JavaScript is therefore generally used in client-side scripts.</p>
 <p>Processing tasks that do not require server intervention are delegated to client-side scripts. In our application, it would be beneficial for the client browser to send a request to the server only after verifying it. Thus, there is no point in sending an authentication request to the server if the user has left the [login] field blank in the authentication form. It is preferable to notify the user that their request is invalid:</p>
 <p><img src="images/100000000000018D0000010080E1A392.png" style="width:10.502cm;height:6.772cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000018D0000010080E1A392.png" /></p>
@@ -2501,6 +2546,8 @@
           </li>
         </ul>
     </ol>
+  </li>
+</ol>
 
 
 
